@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8J8-T2-7qn">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Divisas-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DivisasApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6O-Z4-gjh">
+                                <rect key="frame" x="40" y="240" width="240" height="224"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dólares" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4t3-ol-Qv8">
+                                        <rect key="frame" x="3.5" y="60" width="232" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="232" id="HqR-KE-i2M"/>
+                                            <constraint firstAttribute="height" constant="30" id="bNW-8q-IFr"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="vistaPrevia:" destination="BYZ-38-t0r" eventType="editingChanged" id="mzq-It-607"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctf-4B-Jv9">
+                                        <rect key="frame" x="3.5" y="130" width="232" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.62745098040000002" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Gb7-QP-T3Q"/>
+                                            <constraint firstAttribute="width" constant="232" id="MVQ-Q5-Jdm"/>
+                                        </constraints>
+                                        <state key="normal" title="Comprar">
+                                            <color key="titleColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="comprar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DuS-Ma-Xh9"/>
+                                            <segue destination="bWF-j7-WK7" kind="show" id="oo8-Qb-0uq"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48i-jC-b64">
+                                        <rect key="frame" x="20" y="8" width="200" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="F7i-sI-o4U"/>
+                                            <constraint firstAttribute="width" constant="200" id="aEh-lg-2HU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.62745098040000002" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4t3-ol-Qv8" firstAttribute="centerX" secondItem="s6O-Z4-gjh" secondAttribute="centerX" id="Apn-0E-u0T"/>
+                                    <constraint firstItem="ctf-4B-Jv9" firstAttribute="centerX" secondItem="s6O-Z4-gjh" secondAttribute="centerX" id="SY8-gR-UxR"/>
+                                    <constraint firstAttribute="height" constant="224" id="Trn-5W-nNi"/>
+                                    <constraint firstItem="48i-jC-b64" firstAttribute="top" secondItem="s6O-Z4-gjh" secondAttribute="top" constant="8" id="deY-k7-vIz"/>
+                                    <constraint firstItem="ctf-4B-Jv9" firstAttribute="top" secondItem="4t3-ol-Qv8" secondAttribute="bottom" constant="40" id="drE-kh-KXw"/>
+                                    <constraint firstItem="48i-jC-b64" firstAttribute="centerX" secondItem="s6O-Z4-gjh" secondAttribute="centerX" id="j6K-hx-fGS"/>
+                                    <constraint firstItem="4t3-ol-Qv8" firstAttribute="top" secondItem="48i-jC-b64" secondAttribute="bottom" constant="31.5" id="nzr-hP-2Jf"/>
+                                    <constraint firstAttribute="width" constant="240" id="vkG-8k-gLt"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Tn2-ce-yn4">
+                                <rect key="frame" x="40" y="100" width="240" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="W6b-dM-sGI"/>
+                                    <constraint firstAttribute="width" constant="240" id="qZc-85-9Sc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tn2-ce-yn4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="Fad-nN-SC3"/>
+                            <constraint firstItem="s6O-Z4-gjh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dhj-5U-Zzc"/>
+                            <constraint firstItem="s6O-Z4-gjh" firstAttribute="top" secondItem="Tn2-ce-yn4" secondAttribute="bottom" constant="30" id="e8A-t3-vTJ"/>
+                            <constraint firstItem="Tn2-ce-yn4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eoV-Sc-ieY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Divisas" id="Lda-hM-p5m">
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="Zxa-kc-PF0"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bitcoinsAcumulado" destination="48i-jC-b64" id="UOR-uZ-3cO"/>
+                        <outlet property="dolares" destination="4t3-ol-Qv8" id="kFQ-Bl-AwU"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-815" y="654"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BBf-EK-SRz">
+            <objects>
+                <navigationController id="8J8-T2-7qn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gYb-8L-e7H">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.62745098040000002" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="szV-pJ-UWp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZ7-wr-TEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1529" y="654"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1TC-xR-bAh">
+            <objects>
+                <viewController id="bWF-j7-WK7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vZd-CI-Ekb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uc3-Zj-Sc0">
+                                <rect key="frame" x="40" y="120" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bitcoins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xiw-hY-hcE">
+                                        <rect key="frame" x="79.098010662339675" y="8" width="79.999999999999943" height="20.999999999999929"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.62745098040000002" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBp-Nm-yX0">
+                                        <rect key="frame" x="60" y="50" width="120" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.40000000000000002" alpha="0.062444196430000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="oqc-TZ-eD8"/>
+                                    <constraint firstAttribute="height" constant="128" id="pXk-tL-bok"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hid-U1-7l5">
+                                <rect key="frame" x="40" y="313" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cambio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-RD-gcH">
+                                        <rect key="frame" x="79.174249489243039" y="8" width="79.999999999999943" height="20.999999999999886"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.62745098040000002" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akr-Ig-Dtp">
+                                        <rect key="frame" x="60" y="50" width="120" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.40000000000000002" alpha="0.062444196430000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="B6g-h4-HZr"/>
+                                    <constraint firstAttribute="width" constant="240" id="qv9-e0-eY9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uc3-Zj-Sc0" firstAttribute="centerX" secondItem="vZd-CI-Ekb" secondAttribute="centerX" id="ESi-Nm-oZW"/>
+                            <constraint firstItem="hid-U1-7l5" firstAttribute="centerX" secondItem="vZd-CI-Ekb" secondAttribute="centerX" id="Sqf-Qz-Xyw"/>
+                            <constraint firstItem="hid-U1-7l5" firstAttribute="top" secondItem="uc3-Zj-Sc0" secondAttribute="bottom" constant="65" id="ZPq-lm-bzC"/>
+                            <constraint firstItem="uc3-Zj-Sc0" firstAttribute="top" secondItem="iun-zc-tnO" secondAttribute="top" constant="56" id="yCt-MU-aLE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iun-zc-tnO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7y-vY-gBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="654"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bitcoinLogo" width="300" height="300"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>
